@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Just You 💖</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Face API (ONLY ONE) -->
+  <script defer src="https://unpkg.com/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script defer src="scan.js"></script>
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="overlay"></div>
+
+  <div class="scene">
+    <h2 class="scan-title">Just look at me 💖</h2>
+
+    <div class="camera-frame">
+      <video id="video" autoplay muted playsinline></video>
+      <div class="scan-ring"></div>
+    </div>
+
+    <p class="scan-text">Tap to start face scan</p>
+    <button class="scan-btn" id="startScan">Start Scan 💕</button>
+  </div>
+</body>
+</html>

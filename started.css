@@ -1,0 +1,120 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY – PAPER TEXTURE */
+body {
+  min-height: 100vh;
+  padding: 80px 20px 100px;
+  font-family: 'Poppins', sans-serif;
+  color: #5a1a2e;
+
+  background:
+    linear-gradient(rgba(255,250,252,0.96), rgba(255,250,252,0.96)),
+    url("assets/images/paper-texture.jpg");
+
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* BACK BUTTON */
+.back-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 44px;
+  height: 44px;
+  background: #ffe6ee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #b84b6a;
+  font-size: 1.2rem;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4);
+  z-index: 1000;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 18px;
+}
+
+/* STORY TEXT (BIMBO STYLE) */
+.story-text {
+  max-width: 620px;
+  margin: 0 auto 60px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #7a2d3a;
+}
+
+/* GRID */
+.polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 36px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* POLAROID */
+.polaroid {
+  background: white;
+  padding: 14px 14px 26px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(255, 182, 193, 0.35);
+  text-align: center;
+  animation: float 6s ease-in-out infinite;
+}
+
+.polaroid:nth-child(2){ animation-delay: 1s }
+.polaroid:nth-child(3){ animation-delay: 2s }
+.polaroid:nth-child(4){ animation-delay: 3s }
+
+/* IMAGE */
+.polaroid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* CAPTION – TAPE STYLE */
+.caption {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 14px;
+  background: #fff0f5;
+  border-radius: 6px;
+  font-family: 'Pacifico', cursive;
+  font-size: 0.9rem;
+  color: #c04a6a;
+  position: relative;
+}
+
+.caption::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 48px;
+  height: 14px;
+  background: rgba(255, 220, 230, 0.9);
+  border-radius: 3px;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0%   { transform: translateY(0) rotate(-1deg); }
+  50%  { transform: translateY(-10px) rotate(0deg); }
+  100% { transform: translateY(0) rotate(-1deg); }
+}

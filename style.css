@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Georgia", serif;
+}
+
+/* FULL PAGE BACKGROUND IMAGE */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url("assets/images/bg.jpg") center/cover no-repeat;
+  filter: blur(6px) brightness(0.7);
+  transform: scale(1.05);
+  z-index: -3;
+}
+/* SOFT OVERLAY (important for readability) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -2;
+}
+
+/* CENTER CONTENT */
+.scene {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ENVELOPE */
+.envelope-wrap {
+  position: relative;
+  width: 520px;
+  max-width: 90vw;
+  cursor: pointer;
+  animation: float 5s ease-in-out infinite;
+  transition: transform 0.6s ease;
+}
+
+.envelope-wrap img {
+  width: 100%;
+  display: block;
+  filter:
+    drop-shadow(0 35px 45px rgba(0,0,0,0.45))
+    drop-shadow(0 6px 10px rgba(0,0,0,0.25));
+}
+
+/* ENTER TEXT ON SEAL */
+.enter-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255,255,255,0.95);
+  font-size: 1.15rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.8);
+  pointer-events: none;
+}
+
+/* HOVER */
+.envelope-wrap:hover {
+  transform: scale(1.03);
+}
+
+/* BOTTOM NOTE */
+.note {
+  margin-top: 22px;
+  color: #fff;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 1.2s;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+/* --- OPEN ANIMATION --- */
+.envelope-wrap.open {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.envelope-wrap.open .envelope-img {
+  animation: openEnvelope 1s ease forwards;
+}
+
+/* Fake flap opening illusion */
+@keyframes openEnvelope {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    opacity: 0.85;
+  }
+}
+
+/* Hide Enter text after click */
+.envelope-wrap.open .enter-text {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/* ===== FACE SCAN PAGE ===== */
+
+.scan-title {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.camera-frame {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.15);
+}
+
+.camera-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Scanning ring */
+.scan-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 180, 200, 0.8);
+  animation: scanPulse 2s infinite;
+}
+
+@keyframes scanPulse {
+  0% { box-shadow: 0 0 0 rgba(255,180,200,0.4); }
+  50% { box-shadow: 0 0 30px rgba(255,180,200,0.9); }
+  100% { box-shadow: 0 0 0 rgba(255,180,200,0.4); }
+}
+
+.scan-text {
+  margin-top: 18px;
+  color: #eee;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+.scan-btn {
+  margin-top: 18px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  background: rgba(255,255,255,0.9);
+  color: #000;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scan-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255,255,255,0.4);
+}

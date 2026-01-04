@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Year 🤍</title>
+
+  <!-- Handwritten font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Main styles -->
+  <link rel="stylesheet" href="memories.css">
+</head>
+<body>
+
+  <!-- Page heading -->
+  <h1 class="page-title">Our 12 Months Together 🤍</h1>
+  <p class="page-subtitle">Every month, a little memory 💕</p>
+  <p class="progress-text" id="progressText">0 / 12 memories seen 🤍</p>
+
+  <!-- MANUAL LETTER BUTTON (INSIDE BODY ✅) -->
+  <button id="openLetterBtn" class="open-letter-btn" style="display:none;">
+    Read My Letter 💌
+  </button>
+
+  <!-- POLAROID GRID -->
+  <div class="polaroid-grid">
+
+    <!-- Repeat months (unchanged) -->
+ <!-- JAN -->
+    <div class="polaroid" data-month="jan">
+      <div class="photo">
+        <img src="assets/images/jan.jpg" alt="January">
+      </div>
+      <p class="month">January</p>
+      <span class="caption">New beginnings ✨</span>
+    </div>
+
+    <!-- FEB -->
+    <div class="polaroid" data-month="feb">
+      <div class="photo">
+        <img src="assets/images/feb.jpeg" alt="February">
+      </div>
+      <p class="month">February</p>
+      <span class="caption">Love grew 💗</span>
+    </div>
+
+    <!-- MAR -->
+    <div class="polaroid" data-month="mar">
+      <div class="photo">
+        <img src="assets/images/mar.jpeg" alt="March">
+      </div>
+      <p class="month">March</p>
+      <span class="caption">Soft moments 🌸</span>
+    </div>
+
+    <!-- APR -->
+    <div class="polaroid" data-month="apr">
+      <div class="photo">
+        <img src="assets/images/apr.jpeg" alt="April">
+      </div>
+      <p class="month">April</p>
+      <span class="caption">Smiles only ☁️</span>
+    </div>
+
+    <!-- MAY -->
+    <div class="polaroid" data-month="may">
+      <div class="photo">
+        <img src="assets/images/may.jpeg" alt="May">
+      </div>
+      <p class="month">May</p>
+      <span class="caption">Warm days 💕</span>
+    </div>
+
+    <!-- JUN -->
+    <div class="polaroid" data-month="jun">
+      <div class="photo">
+        <img src="assets/images/jun.jpeg" alt="June">
+      </div>
+      <p class="month">June</p>
+      <span class="caption">Closer 🤍</span>
+    </div>
+
+    <!-- JUL -->
+    <div class="polaroid" data-month="jul">
+      <div class="photo">
+        <img src="assets/images/jul.jpeg" alt="July">
+      </div>
+      <p class="month">July</p>
+      <span class="caption">Laughs 🌷</span>
+    </div>
+
+    <!-- AUG -->
+    <div class="polaroid" data-month="aug">
+      <div class="photo">
+        <img src="assets/images/aug.jpeg" alt="August">
+      </div>
+      <p class="month">August</p>
+      <span class="caption">Us 🩷</span>
+    </div>
+
+    <!-- SEP -->
+    <div class="polaroid" data-month="sep">
+      <div class="photo">
+        <img src="assets/images/sep.jpeg" alt="September">
+      </div>
+      <p class="month">September</p>
+      <span class="caption">Memories 📸</span>
+    </div>
+
+    <!-- OCT -->
+    <div class="polaroid" data-month="oct">
+      <div class="photo">
+        <img src="assets/images/oct.jpeg" alt="October">
+      </div>
+      <p class="month">October</p>
+      <span class="caption">Warm hearts 🍂</span>
+    </div>
+
+    <!-- NOV -->
+    <div class="polaroid" data-month="nov">
+      <div class="photo">
+        <img src="assets/images/nov.jpeg" alt="November">
+      </div>
+      <p class="month">November</p>
+      <span class="caption">Forever vibes 💞</span>
+    </div>
+
+    <!-- DEC -->
+    <div class="polaroid" data-month="dec">
+      <div class="photo">
+        <img src="assets/images/dec.jpeg" alt="December">
+      </div>
+      <p class="month">December</p>
+      <span class="caption">Always you 🎄</span>
+    </div>
+
+  </div>
+
+  <!-- MEMORY MODAL -->
+  <div class="memory-modal" id="memoryModal">
+    <div class="memory-content">
+      <button class="close-btn" id="closeModal">✕</button>
+
+      <h2 id="memoryTitle"></h2>
+      <p id="memorySubtitle"></p>
+
+      <div class="slider">
+        <div class="slides" id="slides"></div>
+        <button class="nav prev" id="prev">‹</button>
+        <button class="nav next" id="next">›</button>
+        <div class="dots" id="dots"></div>
+      </div>
+
+      <p class="photo-caption" id="photoCaption"></p>
+      <p class="memory-text" id="memoryText"></p>
+    </div>
+  </div>
+
+  <!-- FINAL LOVE LETTER MODAL -->
+  <div class="letter-modal" id="letterModal">
+    <div class="letter-paper">
+      <button class="letter-close" id="closeLetter">✕</button>
+      <h2 class="letter-title">My Love 🤍</h2>
+      <p class="letter-text" id="typedLetter"></p>
+      <a href="why-you.html" class="why-link">
+  One last thing…
+</a>
+
+    </div>
+  </div>
+
+  <!-- SCRIPT AT VERY END ✅ -->
+  <script src="memories.js"></script>
+
+</body>
+</html>

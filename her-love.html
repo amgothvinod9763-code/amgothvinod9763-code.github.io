@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Love 🤍</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="her-love.css">
+</head>
+<body>
+
+  <!-- BACK -->
+  <a href="home.html" class="back-home">🤍</a>
+
+  <main class="romance">
+
+    <h1 class="title">Your Love</h1>
+    <p class="subtitle">the kind of love yourdelf decided  — it stays</p>
+
+    <!-- IMAGE -->
+    <div class="image-block">
+      <img src="assets/images/herlove1.jpg" alt="">
+      <p class="img-note">you never left</p>
+    </div>
+
+    <!-- TEXT -->
+    <p class="line">
+      Life was heavy for you, and many times I did not understand your feelings.
+       Still, you stayed with me. You could have walked away, but you didn’t.
+        You stayed even when your heart was tired.
+       You never left me, and that means everything to me.
+    </p>
+
+    <!-- IMAGE -->
+    <div class="image-block right">
+      <img src="assets/images/herlove2.jpg" alt="">
+      <p class="img-note">even when it was hard</p>
+    </div>
+
+    <!-- TEXT -->
+    <p class="line">
+      Nothing was easy for you. Family pressure, fear, and pain were always around you. 
+      Loving me was not simple bcz i overthink a lot i just waste shit,
+       yet you tried in your own way. Even when things became difficult, you chose to stay.
+       That strength in you is something I will always respect adn learn from you 
+    </p>
+
+    <!-- IMAGE -->
+    <div class="image-block">
+      <img src="assets/images/herlove3.jpg" alt="">
+      <p class="img-note">this is love</p>
+    </div>
+
+    <!-- END -->
+    <p class="final">
+      yoyr  love felt like home  
+     i didn’t shared me with anyone when i loved you i started sahring with then i realized the real love make you 
+     comfortable im very comfotable with you just felt home to me naanah i love you bujji  
+       This is not a story love. This is real love.
+    </p>
+
+  </main>
+<script>
+const revealItems = document.querySelectorAll(".line, .final");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.4 });
+
+revealItems.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>

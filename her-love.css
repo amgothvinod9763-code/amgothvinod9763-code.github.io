@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Playfair Display", serif;
+  background: linear-gradient(180deg, #fff5f7, #fffafc);
+  color: #3a1c24;
+}
+
+/* BACK */
+.back-home {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  opacity: 0.75;
+}
+.back-home:hover { opacity: 1; }
+
+/* MAIN */
+.romance {
+  max-width: 780px;
+  margin: 140px auto 160px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* TITLE */
+.title {
+  font-size: 3.4rem;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #b26a7d;
+  margin-bottom: 120px;
+}
+
+/* IMAGE BLOCK */
+.image-block {
+  margin: 120px auto;
+  width: 320px;
+  position: relative;
+  animation: fadeIn 1.6s ease both;
+}
+
+.image-block.right {
+  margin-left: auto;
+}
+
+.image-block img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow:
+    0 25px 50px rgba(255,182,193,0.45),
+    0 0 40px rgba(255,210,220,0.4);
+}
+
+/* IMAGE NOTE */
+.img-note {
+  margin-top: 12px;
+  font-family: "Pacifico", cursive;
+  font-size: 0.95rem;
+  color: #c25a78;
+}
+
+/* TEXT LINES */
+.line {
+  margin: 120px auto;
+  max-width: 520px;
+  font-size: 1.15rem;
+  line-height: 2.1;
+  color: #5a2a36;
+}
+
+/* FINAL */
+.final {
+  margin-top: 160px;
+  font-family: "Pacifico", cursive;
+  font-size: 1.9rem;
+  color: #c25a78;
+}
+
+/* FADE */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .image-block {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+}
+/* 💓 HEARTBEAT GLOW */
+.image-block img {
+  animation: heartbeat 5.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    box-shadow:
+      0 25px 50px rgba(255,182,193,0.45),
+      0 0 40px rgba(255,210,220,0.4);
+  }
+  50% {
+    box-shadow:
+      0 28px 60px rgba(255,182,193,0.65),
+      0 0 55px rgba(255,200,210,0.6);
+  }
+  100% {
+    box-shadow:
+      0 25px 50px rgba(255,182,193,0.45),
+      0 0 40px rgba(255,210,220,0.4);
+  }
+}
+/* ✨ SCROLL REVEAL TEXT */
+.line,
+.final {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s ease;
+}
+
+.line.show,
+.final.show {
+  opacity: 1;
+  transform: translateY(0);
+}

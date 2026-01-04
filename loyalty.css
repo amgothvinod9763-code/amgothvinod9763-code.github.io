@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Playfair Display", serif;
+  background: linear-gradient(180deg, #fdf7f5, #ffffff);
+  color: #2e1a20;
+}
+
+/* BACK */
+.back-home {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  opacity: 0.7;
+}
+.back-home:hover { opacity: 1; }
+
+/* MAIN */
+.loyalty {
+  max-width: 820px;
+  margin: 120px auto 160px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* HERO */
+.hero h1 {
+  font-size: 3.6rem;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-style: italic;
+  color: #8a5a66;
+  margin-bottom: 120px;
+}
+
+/* IMAGES */
+.image-wrap {
+  margin: 100px auto;
+}
+
+.image-wrap.small {
+  margin: 140px auto 100px;
+}
+
+.image-wrap img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 28px;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.15),
+    0 0 30px rgba(200,160,170,0.25);
+}
+
+/* WORDS */
+.words p {
+  margin: 60px auto;
+  font-size: 1.1rem;
+  line-height: 2.2;
+  color: #4a2a32;
+}
+
+/* FINAL */
+.final {
+  margin-top: 160px;
+  font-family: "Pacifico", cursive;
+  font-size: 1.8rem;
+  color: #b05a70;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .words p {
+    font-size: 1rem;
+  }
+}
+/* 🖤 I STAYED TIMELINE */
+.stayed {
+  margin: 160px auto;
+  max-width: 420px;
+  text-align: left;
+}
+
+.stayed-title {
+  font-size: 1.8rem;
+  margin-bottom: 60px;
+  color: #3a1c24;
+  text-align: center;
+}
+
+/* LINE */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(0,0,0,0.15);
+}
+
+/* POINT */
+.point {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.dot {
+  position: absolute;
+  left: -2px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background: #b05a70;
+  border-radius: 50%;
+}
+
+/* TEXT */
+.point p {
+  margin-left: 24px;
+  font-size: 1.05rem;
+  color: #4a2a32;
+  line-height: 1.6;
+}

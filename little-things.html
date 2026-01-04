@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiet Strength 🤍</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="little-things.css">
+</head>
+<body>
+
+  <!-- BACK -->
+  <a href="home.html" class="back-home">🤍</a>
+
+  <!-- JOURNAL -->
+  <main class="journal">
+
+    <h1 class="journal-title">Quiet Strength</h1>
+    <p class="journal-subtitle">things you carry without saying</p>
+
+    <!-- ENTRY 1 -->
+    <section class="entry">
+      <div class="polaroid">
+        <img src="assets/images/strength1.jpeg">
+        <p class="photo-date">18 May 2024</p>
+        <span class="tape"></span>
+        <p class="polaroid-caption">you just made me what u are  </p>
+        <p class="hidden-note"> i felt ki ur the first and last person im gonna have dates or food or anything ur the women i wished</p>.</p>
+        <p class="hidden-note">I noticed this about you that day.</p>
+      </div>
+
+      <p class="entry-text">
+        The way you pause the whole world when we are in this restaurent and didn’ tcared anyone u just real love nanaaahahhhhhh
+      </p>
+    </section>
+
+    <!-- ENTRY 2 -->
+    <section class="entry right">
+      <div class="polaroid">
+        <img src="assets/images/strength2.jpeg">
+        <p class="photo-date">07 sep 2024</p>
+        <span class="tape"></span>
+        <p class="polaroid-caption">without asking</p>
+        <p class="hidden-note">You came to temple of vinayaka chavithi u just standed in all mens and different religion event u stayed i noticed every thing nanah i </p>
+      </div>
+
+      <p class="entry-text">
+        You  are so scared and nervous this day u just stayed for me u did for me. 
+        I remember u just so so cute to learn little things which i felt like teachingsmall childrens about mokkadam  
+        . In the new situation u never seen  and all men situation u stayed u proved the world (worst friend u know).
+      </p>
+    </section>
+
+    <!-- ENTRY 3 -->
+    <section class="entry">
+      <div class="polaroid">
+        <img src="assets/images/strength3.jpeg">
+        <p class="photo-date">10 may 2024</p>
+        <span class="tape"></span>
+        <p class="polaroid-caption">with me</p>
+        <p class="hidden-note">This mattered more than you know.</p>
+      </div>
+
+      <p class="entry-text">
+       that day we we took dog with us at law school first time day day i notice the way u are caring for the way u handled dog what is ur means Your pure care how it looks i seen and i wished that only some day i can get the love she love me without doubt and fear with her last  things
+      </p>
+    </section>
+
+    <p class="final-line">
+      And I fell in love with that strength.
+    </p>
+
+  </main>
+
+  <!-- AUDIO + INTERACTION -->
+  <script>
+    /* Pencil sound on first scroll */
+    let pencilPlayed = false;
+    const pencilAudio = new Audio("assets/audio/pencil.mp3");
+    pencilAudio.volume = 0.25;
+
+    window.addEventListener("scroll", () => {
+      if (!pencilPlayed) {
+        pencilAudio.play().catch(()=>{});
+        pencilPlayed = true;
+      }
+    });
+
+    /* Reveal hidden note on tap */
+    document.querySelectorAll(".polaroid").forEach(card => {
+      card.addEventListener("click", () => {
+        const note = card.querySelector(".hidden-note");
+        if (note) {
+          note.style.opacity = "1";
+          note.style.transform = "translateY(0)";
+        }
+      });
+    });
+    
+  </script>
+
+</body>
+</html>
